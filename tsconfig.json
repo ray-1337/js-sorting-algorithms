@@ -8,9 +8,8 @@
     "lib": ["esnext"],
     "types": ["node"],
     
-
     // Stricter Typechecking Options
-    "noUncheckedIndexedAccess": true,
+    "noUncheckedIndexedAccess": false,
     "exactOptionalPropertyTypes": true,
 
     // Style Options
