@@ -6,8 +6,16 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "keywords": ["sort", "sorting", "algorithm"],
+  "keywords": [
+    "sort",
+    "sorting",
+    "algorithm"
+  ],
   "author": "ray-1337",
   "license": "MIT",
-  "packageManager": "pnpm@10.24.0"
+  "packageManager": "pnpm@10.24.0",
+  "devDependencies": {
+    "@types/node": "^24.10.1",
+    "typescript": "^5.9.3"
+  }
 }
