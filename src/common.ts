@@ -16,6 +16,14 @@ export function isSorted<T>(array: T[], compareFn: CompareFunction<T> = createDe
   return array.every((item, index, arr) => index > 0 ? (compareFn(arr[index - 1], item) <= 0) : true);
 };
 
+export function shuffleAndSwap<T>(array: T[], pure: boolean = true) {
+  const total = array.length;
+
+  return array.forEach((_item, index) => 
+    swap(array, index, createRandomness(total, pure))
+  );
+};
+
 export function createDefaultCompare<T>(): CompareFunction<T> {
   return (a, b) => {
     return (a > b) ? 1 : (a < b ? - 1 : 0);
