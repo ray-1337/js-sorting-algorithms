@@ -10,8 +10,16 @@ export function cloneArray<T>(array: T[]) {
   return [...array];
 };
 
-export function isSorted<T>(array: T[], compareFn: CompareFunction<T> = createDefaultCompare()) {
+export function isSortedAscending<T>(array: T[], compareFn: CompareFunction<T> = createDefaultCompare()) {
   return array.every((item, index, arr) => index > 0 ? (compareFn(arr[index - 1], item) <= 0) : true);
+};
+
+export function isSortedDescending<T>(array: T[], compareFn: CompareFunction<T> = createDefaultCompare()) {
+  return array.every((item, index, arr) => index > 0 ? (compareFn(arr[index - 1], item) >= 0) : true);
+};
+
+export function isSorted<T>(array: T[], compareFn: CompareFunction<T> = createDefaultCompare()) {
+  return isSortedAscending(array, compareFn) || isSortedDescending(array, compareFn);
 };
 
 export function shuffleAndSwap<T>(array: T[], pure: boolean = true) {
