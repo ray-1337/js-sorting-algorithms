@@ -4,7 +4,9 @@
   "description": "",
   "type": "module",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "bench": "clear && node ./test/benchmark/index.mjs",
+    "build": "rimraf dist && tsc && tsc-alias"
   },
   "keywords": [
     "sort",
@@ -15,7 +17,12 @@
   "license": "MIT",
   "packageManager": "pnpm@10.24.0",
   "devDependencies": {
+    "@jest/globals": "^30.2.0",
     "@types/node": "^24.10.1",
+    "jest": "^30.2.0",
+    "rimraf": "^6.1.2",
+    "table": "^6.9.0",
+    "tsc-alias": "^1.8.16",
     "typescript": "^5.9.3"
   }
 }
