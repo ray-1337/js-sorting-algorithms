@@ -30,10 +30,8 @@ export function createDefaultCompare<T>(): CompareFunction<T> {
   };
 };
 
-export function swap<T>(array: T[], a: number, b: number) {
-  const temp = array[a];
-  array[a] = array[b];
-  array[b] = temp;
+export function swap<T>(array: T[], from: number, to: number) {
+  [array[from], array[to]] = [array[to], array[from]];
   
   return;
 };
