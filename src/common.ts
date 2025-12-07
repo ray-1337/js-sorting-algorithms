@@ -13,3 +13,11 @@ export function createDefaultCompare<T>(): CompareFunction<T> {
     return (a > b) ? 1 : (a < b ? - 1 : 0);
   };
 };
+
+export function swap<T>(array: T[], a: number, b: number) {
+  const temp = array[a];
+  array[a] = array[b];
+  array[b] = temp;
+  
+  return;
+};
