@@ -1,9 +1,17 @@
 {
   "include": ["src", "index.d.ts"],
+  "exclude": ["node_modules", "dist"],
+
+  "tsc-alias": {
+    "resolveFullPaths": true,
+    "verbose": false
+  },
+  
   "compilerOptions": {
     // File Layout
     "rootDir": "./src",
-    // "outDir": "./dist",
+    "outDir": "./dist",
+    "moduleResolution": "node",
     "module": "esnext",
     "target": "esnext",
     "lib": ["esnext"],
@@ -24,10 +32,13 @@
     // Recommended Options
     "strict": true,
     "alwaysStrict": true,
-    "verbatimModuleSyntax": true,
+    "removeComments": true,
+    "declaration": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
     "isolatedModules": true,
     "noUncheckedSideEffectImports": true,
-    "moduleDetection": "force",
-    "skipLibCheck": true,
+    "moduleDetection": "auto",
+    "skipLibCheck": false,
   }
 }
