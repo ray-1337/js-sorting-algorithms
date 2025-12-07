@@ -1,5 +1,4 @@
 import { isSorted, createDefaultCompare, shuffleAndSwap } from "../../common";
-import type { CompareFunction } from "../../typings/index";
 
 export default function bogoSort<T>(arr: T[], compareFn: CompareFunction<T> = createDefaultCompare(), options: BogoSortOptions = {}) {
   const array = [...arr];

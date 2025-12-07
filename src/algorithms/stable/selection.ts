@@ -1,4 +1,3 @@
-import type { CompareFunction } from "../../typings/index";
 import { cloneArray, createDefaultCompare } from "../../common";
 
 // Lines of code were copied from https://www.geeksforgeeks.org/dsa/selection-sort-algorithm-2 and optimized

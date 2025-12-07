@@ -1,4 +1,3 @@
-import type { CompareFunction } from "../../typings/index";
 import { cloneArray, createDefaultCompare, swap } from "../../common";
 
 // Lines of code were copied from https://en.wikipedia.org/wiki/Gnome_sort#Pseudocode and optimized

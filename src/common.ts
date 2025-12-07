@@ -1,7 +1,5 @@
 import { randomInt } from "node:crypto";
 
-import type { CompareFunction } from "./typings/index";
-
 export function createRandomness(n: number, pure: boolean = true) {
   n++;
 
