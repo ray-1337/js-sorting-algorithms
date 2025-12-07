@@ -1,6 +1,6 @@
 import { randomInt } from "node:crypto";
 
-export function createRandomness(n: number, pure: boolean = true) {
+export function createRandomness(n: number, pure: boolean = false) {
   n++;
 
   return pure === true ? randomInt(n) : Math.floor(Math.random() * n);
